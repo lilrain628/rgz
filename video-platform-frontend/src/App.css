@@ -1,0 +1,22 @@
+/* Убедимся, что HTML и body растягиваются на весь экран */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Убираем лишние отступы и растягиваем на всю высоту */
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* Теперь проверяем стили для .app-container */
+.app-container {
+  background-image: url('./fon.png'); /* Фон для всего приложения */
+  background-size: cover;             /* Заполняет весь экран */
+  background-position: center center; /* Центрируем фон */
+  background-repeat: no-repeat;       /* Не повторяем фон */
+  background-attachment: fixed;       /* Фиксируем фон при прокрутке */
+  min-height: 100vh;                  /* Минимальная высота контейнера - 100% высоты экрана */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;        /* Контент сверху */
+}
